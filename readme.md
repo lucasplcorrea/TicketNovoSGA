@@ -19,3 +19,4 @@ MIT
 **Free Software, Hell Yeah!**
 
 ## Screenshots
+![img](https://raw.githubusercontent.com/lucasplcorrea/TicketNovoSGA/main/Screenshots/screenshot.png)
