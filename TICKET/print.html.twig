@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ atendimento.senha }}</title>
+    <link type="text/css" rel="stylesheet" href="{{ baseUrl() }}/css/style.css?v={{ version }}" />
+    <link type="text/css" rel="stylesheet" href="{{ baseUrl() }}/css/bootstrap.min.css?v={{ version }}" />
+    <link type="text/css" rel="stylesheet" href="{{ baseUrl() }}/css/print.css?v={{ version }}" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body onload="window.print()">
+    <div id="header">
+        {# SUA LOGO VAI AQUI, IMPORTANTE USAR {{ baseUrl() }}/CAMINHO DA SUA LOGO, IMPORTANTE QUE ELA ESTEJA DENTRO DE UMA PASTA DO SGA COM PERMISSÃO DE LEITURA, DO CONTRÁRIO NÃO FUNCIONA CORRETAMENTE #}
+        <img src="{{ baseUrl() }}/CAMINHODASUALOGO.png" alt="Logo" height="110" width="260">
+    </div><br />
+    
+    <div id="servicos">
+        <div id="textoservicos">
+            <h4>{{ atendimento.servico }}</h4>
+                <div id="separacaoservicos"></div>
+            <h4>{{ atendimento.senha.prioridade.nome }}</h4>
+        </div>
+    </div><br /><br />
+
+        <div id="senha">
+            <div id="senha-body">
+                <h3>SENHA</h3>
+                {{ atendimento.senha }}
+            </div>
+        </div><br /><br />
+
+    <div id="info">
+        {# LINHA 1 DO ENDEREÇO #}
+        <p>📌 Rua ....</p>
+        {# LINHA 2 DO ENDEREÇO #}
+        <p> Centro, Florianópolis, SC</p>
+        {# LINHA ADICIONAL #}
+        <p>🌐 tabelionatocapital.com.br</p>
+
+        <div id="hora">
+            <h5>🕝 {{ now|date('d/m/Y H:i') }}</h5>
+        </div>
+    </div>
+
+</body>
+</html>
